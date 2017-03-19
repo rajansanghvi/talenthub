@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.9
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TalentHub", "TalentHub\TalentHub.csproj", "{4275500B-B648-405D-A4AB-BA0FFC004187}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TalentHub.Tests", "TalentHub.Tests\TalentHub.Tests.csproj", "{D1D2A43C-02C6-4530-8DA0-71C0A1351590}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4275500B-B648-405D-A4AB-BA0FFC004187}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4275500B-B648-405D-A4AB-BA0FFC004187}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4275500B-B648-405D-A4AB-BA0FFC004187}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4275500B-B648-405D-A4AB-BA0FFC004187}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1D2A43C-02C6-4530-8DA0-71C0A1351590}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1D2A43C-02C6-4530-8DA0-71C0A1351590}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1D2A43C-02C6-4530-8DA0-71C0A1351590}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1D2A43C-02C6-4530-8DA0-71C0A1351590}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
