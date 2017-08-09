@@ -158,6 +158,7 @@
     <Compile Include="AppCode\Models\Enum.cs" />
     <Compile Include="AppCode\Models\FilterDto.cs" />
     <Compile Include="AppCode\Models\Structs.cs" />
+    <Compile Include="AppCode\Models\User.cs" />
     <Compile Include="AppCode\Utilities\DateUtility.cs" />
     <Compile Include="AppCode\Utilities\Utility.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />

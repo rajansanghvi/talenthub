@@ -3,6 +3,7 @@
 	internal enum enRegistrationResponse {
 		BadData = 1,
 		EmailIdOrUsernameExists = 2,
-		Ok = 3
+		Ok = 3,
+		InvalidCredential = 4
 	}
 }

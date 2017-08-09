@@ -39,3 +39,43 @@ BEGIN
   end if;
 END;
 call addIndex;
+
+create table if not exists app_sessions
+(
+  id int(11) AUTO_INCREMENT primary KEY
+  , session_id varchar(40) not null
+  , user_id int(11) not null
+  , expiry_date datetime null
+  , app_version float default 1.0
+  , created_by varchar(255) not null
+  , created_date datetime default now()
+  , modified_by varchar(255) null
+  , modified_date datetime null
+)engine innoDb;
+
+drop procedure if exists addIndex;
+CREATE PROCEDURE addIndex() 
+BEGIN
+  if not exists(select 1 from information_schema.statistics where TABLE_NAME = 'app_sessions' and index_NAME = 'idx_app_sessions_session_id') then
+    create index idx_app_sessions_session_id on app_sessions(session_id);
+  end if;
+END;
+call addIndex;
+
+drop procedure if exists addIndex;
+CREATE PROCEDURE addIndex() 
+BEGIN
+  if not exists(select 1 from information_schema.statistics where TABLE_NAME = 'app_sessions' and index_NAME = 'idx_app_sessions_user_id') then
+    create index idx_app_sessions_user_id on app_sessions(user_id);
+  end if;
+END;
+call addIndex;
+
+drop procedure if exists addIndex;
+CREATE PROCEDURE addIndex() 
+BEGIN
+  if not exists(select 1 from information_schema.statistics where TABLE_NAME = 'app_sessions' and index_NAME = 'idx_app_sessions_session_id_user_id') then
+    create index idx_app_sessions_session_id_user_id on app_sessions(session_id, user_id);
+  end if;
+END;
+call addIndex;

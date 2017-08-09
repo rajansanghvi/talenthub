@@ -20,19 +20,18 @@ namespace TalentHub.Controllers {
 
 			switch (response) {
 				case enRegistrationResponse.BadData:
-					responseMsg.StatusCode = HttpStatusCode.BadRequest;
-					break;
-
+					return ResponseMessage(Request.CreateErrorResponse(HttpStatusCode.BadRequest, "Data validation errors. Please rectify the registration data and try again. Thank you!"));
 				case enRegistrationResponse.EmailIdOrUsernameExists:
-					responseMsg.StatusCode = HttpStatusCode.Conflict;
-					break;
-
+					return ResponseMessage(Request.CreateErrorResponse(HttpStatusCode.Conflict, "The username or email id sent in the request is already associated with a different user. Please use another username or email id to continue registration. Thank you!"));
 				default:
-					responseMsg.StatusCode = HttpStatusCode.Created;
-					break;
+					return ResponseMessage(Request.CreateResponse(HttpStatusCode.Created));
 			}
+		}
 
-			return ResponseMessage(responseMsg);
+		public IHttpActionResult Login(dynamic data) {
+			string username = data.Username;
+			string password = data.Password;
+			bool rememberMe = data.RememberMe;
 		}
 	}
 }
